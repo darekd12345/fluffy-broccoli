@@ -1,17 +1,26 @@
 {
   "name": "mednafen-gui",
+  "main": "src/Shared/main.js",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "electron-is-dev": "^1.1.0",
+    "gamepad": "^1.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1",
+    "shortid": "^2.2.14",
+    "source-map-support": "^0.5.12"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000; electron-webpack dev\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -27,5 +36,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@rescripts/cli": "0.0.11",
+    "@rescripts/rescript-env": "0.0.10",
+    "concurrently": "^4.1.1",
+    "devtron": "^1.4.0",
+    "electron": "^5.0.6",
+    "electron-builder": "^20.44.4",
+    "electron-webpack": "^2.7.4",
+    "wait-on": "^3.2.0",
+    "webpack-cli": "^3.3.5"
+  },
+  "electronWebpack": {
+    "main": {
+      "sourceDirectory": "src/Shared"
+    }
   }
 }
