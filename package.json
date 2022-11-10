@@ -42,7 +42,7 @@
     "@rescripts/rescript-env": "0.0.10",
     "concurrently": "^4.1.1",
     "devtron": "^1.4.0",
-    "electron": "^5.0.6",
+    "electron": "^18.3.7",
     "electron-builder": "^20.44.4",
     "electron-webpack": "^2.7.4",
     "wait-on": "^3.2.0",
